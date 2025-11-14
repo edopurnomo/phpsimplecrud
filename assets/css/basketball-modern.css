@@ -18,16 +18,6 @@ body.bg-body-tertiary {
     background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%) !important;
     min-height: 100vh;
 }
-.bg-body-tertiary {
-    background-image: url('../img/lapangan/ basket.jpg');
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-color: transparent !important;
-    /* Menonaktifkan warna background bawaan */
-}
 
 /* ================== SIDEBAR STYLING ================== */
 .app-wrapper .app-sidebar {
