@@ -75,12 +75,12 @@ $dataMahasiswa = $mahasiswa->getAllMahasiswa();
 													<th>NIM</th>
 													<th>Nama</th>
 													<th>Prodi</th>
-													<th>Provinsi</th>
+													<th>Posisi</th>
 													<th>Alamat</th>
 													<th>Telp</th>
 													<th>Email</th>
-													<th class="text-center">Status</th>
-													<th class="text-center">Aksi</th>
+													<th>Status</th>
+													<th>Aksi</th>
 												</tr>
 											</thead>
 											<tbody>

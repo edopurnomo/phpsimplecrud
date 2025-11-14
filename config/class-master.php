@@ -23,14 +23,14 @@ class MasterData extends Database {
 
     // Method untuk mendapatkan daftar provinsi
     public function getProvinsi(){
-        $query = "SELECT * FROM tb_provinsi";
+        $query = "SELECT * FROM tb_posisi";
         $result = $this->conn->query($query);
         $provinsi = [];
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $provinsi[] = [
-                    'id' => $row['id_provinsi'],
-                    'nama' => $row['nama_provinsi']
+                    'id' => $row['id_posisi'],
+                    'nama' => $row['nama_posisi']
                 ];
             }
         }
@@ -115,7 +115,7 @@ class MasterData extends Database {
     // Method untuk input data provinsi
     public function inputProvinsi($data){
         $namaProvinsi = $data['nama'];
-        $query = "INSERT INTO tb_provinsi (nama_provinsi) VALUES (?)";
+        $query = "INSERT INTO tb_posisi (nama_posisi) VALUES (?)";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -128,7 +128,7 @@ class MasterData extends Database {
 
     // Method untuk mendapatkan data provinsi berdasarkan id
     public function getUpdateProvinsi($id){
-        $query = "SELECT * FROM tb_provinsi WHERE id_provinsi = ?";
+        $query = "SELECT * FROM tb_posisi WHERE id_posisi = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -140,8 +140,8 @@ class MasterData extends Database {
         if($result->num_rows > 0){
             $row = $result->fetch_assoc();
             $provinsi = [
-                'id' => $row['id_provinsi'],
-                'nama' => $row['nama_provinsi']
+                'id' => $row['id_posisi'],
+                'nama' => $row['nama_posisi']
             ];
         }
         $stmt->close();
@@ -152,7 +152,7 @@ class MasterData extends Database {
     public function updateProvinsi($data){
         $idProvinsi = $data['id'];
         $namaProvinsi = $data['nama'];
-        $query = "UPDATE tb_provinsi SET nama_provinsi = ? WHERE id_provinsi = ?";
+        $query = "UPDATE tb_posisi SET nama_posisi = ? WHERE id_posisi = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -165,7 +165,7 @@ class MasterData extends Database {
 
     // Method untuk menghapus data provinsi
     public function deleteProvinsi($id){
-        $query = "DELETE FROM tb_provinsi WHERE id_provinsi = ?";
+        $query = "DELETE FROM tb_posisi WHERE id_posisi = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;

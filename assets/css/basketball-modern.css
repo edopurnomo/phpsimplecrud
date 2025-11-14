@@ -1,0 +1,616 @@
+/* ============================================
+   BASKETBALL BADBOY CLUB - COMPLETE MODERN CSS
+   Tambahkan file ini ke template/header.php
+   ============================================ */
+
+/* Custom Color Variables */
+:root {
+    --primary-orange: #ff6b35;
+    --primary-orange-light: #ff8c42;
+    --primary-dark: #1e1e2e;
+    --secondary-dark: #2a2a3e;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --sidebar-bg: linear-gradient(180deg, #2a2a3e 0%, #1f1f2e 100%);
+}
+
+/* Body Background dengan Gradient */
+body.bg-body-tertiary {
+    background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%) !important;
+    min-height: 100vh;
+}
+.bg-body-tertiary {
+    background-image: url('../img/lapangan/ basket.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: transparent !important;
+    /* Menonaktifkan warna background bawaan */
+}
+
+/* ================== SIDEBAR STYLING ================== */
+.app-wrapper .app-sidebar {
+    background: var(--sidebar-bg) !important;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.app-sidebar .brand-link {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%) !important;
+    border-radius: 12px;
+    margin: 10px 15px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.app-sidebar .brand-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.app-sidebar .brand-text {
+    font-weight: 700 !important;
+    color: #fff !important;
+}
+
+/* Sidebar Navigation */
+.app-sidebar .nav-sidebar .nav-link {
+    border-radius: 10px;
+    margin: 5px 15px;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.app-sidebar .nav-sidebar .nav-link:hover {
+    background: rgba(255, 107, 53, 0.1) !important;
+    color: #fff !important;
+    transform: translateX(5px);
+}
+
+.app-sidebar .nav-sidebar .nav-link.active {
+    background: linear-gradient(90deg, rgba(255, 107, 53, 0.2) 0%, rgba(255, 140, 66, 0.1) 100%) !important;
+    border-left: 4px solid var(--primary-orange);
+    color: #fff !important;
+}
+
+.app-sidebar .nav-header {
+    color: #888 !important;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* ================== NAVBAR STYLING ================== */
+.app-header {
+    background: rgba(42, 42, 62, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.app-header .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease;
+}
+
+.app-header .navbar-nav .nav-link:hover {
+    color: var(--primary-orange) !important;
+}
+
+/* ================== MAIN CONTENT ================== */
+.app-main {
+    background: transparent;
+}
+
+/* Content Header (Breadcrumb Area) */
+.app-content-header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px 20px 0 20px;
+    padding: 20px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-content-header h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.app-content-header .breadcrumb {
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.app-content-header .breadcrumb-item a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.app-content-header .breadcrumb-item a:hover {
+    color: var(--primary-orange-light);
+}
+
+.app-content-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.app-content-header .breadcrumb-item+.breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ================== CARD STYLING ================== */
+
+/* Card dengan Background Putih (untuk form & table) */
+.app-content .card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.app-content .card:hover {
+    box-shadow: 0 12px 40px rgba(255, 107, 53, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Card Header */
+.app-content .card-header {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    border-bottom: none;
+    padding: 20px 25px;
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.app-content .card-header .card-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.app-content .card-header .btn-tool {
+    color: #fff;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-content .card-header .btn-tool:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+/* Card Body */
+.app-content .card-body {
+    padding: 30px;
+    background: #fff;
+}
+
+.app-content .card-body p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* ================== FORM STYLING ================== */
+
+/* Form Labels */
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    padding: 12px 18px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    font-size: 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.15);
+    background: #fff;
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+/* Textarea */
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ================== TABLE STYLING ================== */
+
+.table-responsive {
+    border-radius: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+}
+
+.table {
+    background: #fff;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: max-content;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody td {
+    padding: 16px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 14px;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 107, 53, 0.05);
+    transform: scale(1.005);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ================== BUTTON STYLING ================== */
+
+.btn {
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn i {
+    font-size: 16px;
+}
+
+/* Primary Button (Blue) */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Success Button (Green) */
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%) !important;
+    color: #fff !important;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.3);
+}
+
+/* Warning Button (Yellow) */
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%) !important;
+    color: #333 !important;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 193, 7, 0.3);
+}
+
+/* Danger Button (Red) */
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #bd2130 100%) !important;
+    color: #fff !important;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(220, 53, 69, 0.3);
+}
+
+/* Info Button (Cyan) */
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%) !important;
+    color: #fff !important;
+}
+
+.btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 162, 184, 0.3);
+}
+
+/* Small Buttons (Edit/Delete) */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+/* Large Buttons */
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* ================== BADGE/STATUS STYLING ================== */
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* ================== ALERT STYLING ================== */
+
+.alert {
+    border-radius: 12px;
+    border: none;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    color: #0c5460;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #856404;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+}
+
+/* ================== FOOTER STYLING ================== */
+
+.app-footer {
+    background: rgba(42, 42, 62, 0.5);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 107, 53, 0.2);
+    margin: 20px;
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.app-footer a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.app-footer a:hover {
+    color: var(--primary-orange-light);
+}
+
+/* ================== SCROLLBAR STYLING ================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(30, 30, 46, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-orange);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-orange-light);
+}
+
+/* ================== ANIMATION ================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app-content .card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* ================== RESPONSIVE DESIGN ================== */
+
+@media (max-width: 768px) {
+    .app-content-header {
+        margin: 10px;
+        padding: 15px 20px;
+    }
+
+    .app-content-header h3 {
+        font-size: 22px;
+    }
+
+    .app-content .card-body {
+        padding: 20px;
+    }
+
+    .app-content .card-body p {
+        font-size: 14px;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 12px 10px;
+    }
+}
+
+/* ================== SPECIAL STYLES ================== */
+
+/* Untuk halaman beranda dengan greeting card */
+.app-content .card.greeting-card {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-content .card.greeting-card::before {
+    content: "🏀";
+    position: absolute;
+    font-size: 250px;
+    right: -50px;
+    top: -70px;
+    opacity: 0.1;
+    transform: rotate(-20deg);
+    pointer-events: none;
+}
+
+.app-content .card.greeting-card .card-body p {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.spinner-border {
+    border-color: var(--primary-orange);
+    border-right-color: transparent;
+}
+
+/* Pagination */
+.pagination .page-link {
+    border-radius: 8px;
+    margin: 0 3px;
+    color: var(--primary-orange);
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background: var(--primary-orange);
+    color: #fff;
+    border-color: var(--primary-orange);
+    transform: translateY(-2px);
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+}
+
+/* Select2 Dropdown (jika menggunakan) */
+.select2-container--default .select2-selection--single {
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    height: 45px;
+    padding: 8px 18px;
+}
+
+.select2-container--default .select2-selection--single:focus {
+    border-color: var(--primary-orange);
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+.card-header .card-tools {
+    display: flex;
+    flex-direction: row;
+    /* ✅ sejajar horizontal */
+    align-items: center;
+    gap: 8px;
+    /* ✅ kasih jarak antar tombol */
+}
+.card-header .btn-tool i {
+    margin: 0;
+}
